@@ -1,0 +1,25 @@
+[package]
+name = "dust-sdl2"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+dust-core = { path = "../../core", features = ["serde", "log"] }
+emu-utils = { git = "https://github.com/kelpsyberry/emu-utils", features = ["triple-buffer", "app"] }
+dust-soft-2d = { path = "../../render/soft-2d", features = ["threaded"] }
+dust-soft-3d = { path = "../../render/soft-3d" }
+dust-wgpu-2d = { path = "../../render/wgpu-2d" }
+dust-wgpu-3d = { path = "../../render/wgpu-3d", features = ["threaded"] }
+
+# UI
+clap = { version = "4.5.4", features = ["derive"] }
+sdl2 = "0.33.0"
+
+# Utils
+anyhow = { version = "1.0.86", features = ["backtrace"] }
+
+# Logging
+slog = { version = "2.7" }
+slog-term = { version = "2.8" }
+slog-async = { version = "2.6" }

@@ -7,6 +7,7 @@ members = [
     "render/wgpu-2d",
     "render/wgpu-3d",
     "frontend/desktop",
+    "frontend/desktop-sdl2",
     "frontend/web/crate",
 ]
 resolver = "2"
@@ -20,3 +21,6 @@ inherits = "release"
 debug = false
 lto = true
 codegen-units = 1
+
+[patch.crates-io]
+sdl2 = { path = '/origin/home/jmjoy/workspace/rust/sdl2' }
